@@ -7,6 +7,7 @@ import { MdThumbUp, MdThumbDown } from 'react-icons/md'
 import ShowMoreText from 'react-show-more-text'
 import { useDispatch, useSelector } from 'react-redux'
 import {getChannelDetails} from '../../redux/actions/channel.action'
+import HelmetCustom from './HelmetCustom'
 
 const VideoMetaData = () => { 
 
@@ -27,6 +28,8 @@ const VideoMetaData = () => {
 
     return ( 
         <div className="videoMetaData py-2">
+            {/* <HelmetCustom title={title} description={description} /> */}
+
             <div className="videoMetaData__top">
                 <h5>Video Title</h5>
                 <div className="d-flex justify-content-between align-items-center py-1"> 
