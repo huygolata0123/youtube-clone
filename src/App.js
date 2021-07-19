@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route, Switch,Redirect, useHistory } from 'rea
 import './_app.scss'
 import WatchScreen from './screens/watchScreen/WatchScreen'
 import SearchScreen from './screens/SearchScreen'
+import SubscriptionsScreen from './screens/subscriptionsScreen/SubscriptionsScreen'
+import ChannelScreen from './screens/channelScreen/ChannelScreen'
 
 
 const Layout = ({ children }) => {
@@ -71,6 +73,19 @@ const App = () => {
             <Route path='/watch/:id'>
                 <Layout>
                     <WatchScreen />
+                </Layout>
+            </Route>
+
+
+            <Route path='/feed/subscriptions'>
+                <Layout>
+                <SubscriptionsScreen />
+                </Layout>
+            </Route>
+
+            <Route path='/channel/:channelId'>
+                <Layout>
+                 <ChannelScreen />
                 </Layout>
             </Route>
 

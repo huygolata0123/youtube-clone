@@ -1,10 +1,11 @@
-import React ,{useState} from 'react'
+import React ,{useState} from 'react' 
 import "./_header.scss"
-
+import { useSelector } from 'react-redux'
 import {FaBars} from "react-icons/fa"
 import {AiOutlineSearch} from "react-icons/ai"
 import {MdNotifications, MdApps} from "react-icons/md"
 import { useHistory } from 'react-router'
+
 
 const Header = ({handleToggleSidebar}) => {
 
@@ -16,8 +17,10 @@ const Header = ({handleToggleSidebar}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        history.push(`search/${input}`)
+        history.push(`/search/${input}`)
     }
+    
+const user = useSelector(state => state.auth?.user)
 
 
     return (
@@ -50,7 +53,7 @@ const Header = ({handleToggleSidebar}) => {
                     <MdNotifications size={28} />
                     <MdApps size={28} />
                     <img
-                    src="https://cdn.statically.io/img/st2.depositphotos.com/5934840/11872/v/950/depositphotos_118723450-stock-illustration-boy-anime-male-manga-cartoon.jpg  "
+                    src='https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png'
                     alt="avatar"
                     />  
 

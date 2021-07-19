@@ -5,6 +5,7 @@ import Comments from '../../components/comments/Comments'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import VideoMetaData from '../../components/videoMetaData/VideoMetaData'
+import { Helmet } from 'react-helmet'
 import VideoHorizontal from '../../components/videoHorizontal/VideoHorizontal'
 import './watchScreen.scss'
 import { getVideoById, getRelatedVideos } from '../../redux/actions/videos.action'
@@ -30,6 +31,9 @@ function WatchScreen() {
 
     return (     
     <Row>
+        <Helmet>
+            <title>{video?.snippet?.title}</title>
+        </Helmet>
         <Col lg={8}>
 
             <div className="watchScreen__player">

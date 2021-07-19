@@ -12,6 +12,7 @@ const Comments = ({ videoId,totalComments }) => {
     }, [videoId, dispatch])
 
     const comments = useSelector(state => state.commentList.comments)
+    // const { photoURL } = useSelector(state => state.auth?.user)
 
     const [text,setText] = useState(' ')
 
@@ -32,8 +33,8 @@ const Comments = ({ videoId,totalComments }) => {
                 <p>{totalComments} Comments</p>
                <div className="comments__form d-flex w-100 my-2" >
                    <img 
-                    src="https://cdn.statically.io/img/st2.depositphotos.com/5934840/11872/v/950/depositphotos_118723450-stock-illustration-boy-anime-male-manga-cartoon.jpg  "
-                    alt=' '
+                    src='https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png'
+                    alt='avatar'
                     className="rounder-circle mr-3"
                    />
                    <form onSubmit={handleComment} className="d-flex flex-grow-1">
